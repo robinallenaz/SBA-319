@@ -13,6 +13,7 @@ let controls = {
         }
     }
 },
+
 create: async (req, res) => {
     try {
         let newUser = new UserModel({
@@ -20,5 +21,13 @@ create: async (req, res) => {
             age: req.body.age,
             hobby: req.body.hobby
         });
+        let savedUser = await newUser.save();
+        res.json(savedUser);
+    }
+    catch(err) {
+        res.json({
+            errors: err
+        })
     }
 }
+module.exports = controls;

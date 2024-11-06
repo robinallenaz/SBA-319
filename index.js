@@ -6,7 +6,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
 //Connect to the database
-mongoose.connect(process.env.ATLAS_URL, {
+mongoose.connect(process.env.DB_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true
 }).then(() => {
@@ -17,6 +17,12 @@ mongoose.connect(process.env.ATLAS_URL, {
 
 //Middleware
 app.use(express.json());
+
+//Routes
+
+let UsersController = require('./controllers/UsersController.js');
+app.get("/users", UsersController.all);
+app.post("/users", UsersController.create);
 
 //Start server
 app.listen(process.env.PORT);
