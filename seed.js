@@ -6,28 +6,51 @@ await mongoose.connect(process.env.ATLAS_URI)
 // Require Models for delete and create operations
 import Post from '../models/Post.js';
 import User from '../models/User.js';
-
-try {
-  const users = [
-    {
-      email: 'john@doe.com',
-      password: '123456',
-      username: 'johndoe123',
-      name: "John Doe"
-    },
-    {
-      email: 'boba@fett.com',
-      password: 'jetpackdude',
-      username: 'bobafett123',
-      name: "Boba Fett"
-    },
-    {
-      email: 'darth@vader.com',
-      password: 'iamyourfather',
-      username: 'darthlord123',
-      name: "Darth Vader"
-    },
-  ];
+  
+  try {
+    const users = [
+      {
+        email: 'jane.smith@email.com',
+        password: 'securepassword123', // Use stronger passwords in real applications
+        username: 'janethedeveloper',
+        name: "Jane Smith",
+      },
+      {
+        email: 'michael.lee@company.com',
+        password: 'anotherStrongPassword', 
+        username: 'mleeman',
+        name: "Michael Lee",
+      },
+      {
+        email: 'ai.researcher@institute.org',
+        password: 'scienceRocks1!', 
+        username: 'aiResearcher',
+        name: "AI Researcher",
+      },
+      {
+        email: 'john.doe@updated.com',
+        password: 'passwordUpdated',
+        username: 'johndoe123',
+        name: "John Doe",
+      },
+      {
+        email: 'alice.johnson@gmail.com',
+        password: 'strongPassword456',
+        username: 'alicej123',
+        name: "Alice Johnson",
+      },
+      {
+        email: 'david.kim@outlook.com',
+        password: 'password789',
+        username: 'davidkim99',
+        name: "David Kim",
+      },
+    ];
+    // Rest of your code using the users array
+  } catch (error) {
+    // Handle any errors that might occur
+    console.error(error);
+  }
 
 
   await Post.deleteMany({});
