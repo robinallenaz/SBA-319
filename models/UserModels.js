@@ -1,7 +1,19 @@
-const express = require("express");
-const router = express.Router();
-const users = require("./UserModels.js");
-const error = require("../myapp/middleware.js");
+const mongoose = require("mongoose");
+let Schema = mongoose.Schema;
+
+let UserSchema = new Schema({
+  name: String,
+  age: Number,
+  Hobby: String
+});
+
+module.exports = mongoose.model("User", UserSchema);
+
+
+// const express = require("express");
+// const router = express.Router();
+// const users = require("./UserModels.js");
+// const error = require("../myapp/middleware.js");
 
 // BASE PATH FOR THIS ROUTER IS: /api/users
 
