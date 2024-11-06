@@ -14,36 +14,42 @@ import User from '../models/User.js';
         password: 'securepassword123', // Use stronger passwords in real applications
         username: 'janethedeveloper',
         name: "Jane Smith",
+        userId: 1
       },
       {
         email: 'michael.lee@company.com',
         password: 'anotherStrongPassword', 
         username: 'mleeman',
         name: "Michael Lee",
+        userId: 2
       },
       {
         email: 'ai.researcher@institute.org',
         password: 'scienceRocks1!', 
         username: 'aiResearcher',
         name: "AI Researcher",
+        userId: 3
       },
       {
         email: 'john.doe@updated.com',
         password: 'passwordUpdated',
         username: 'johndoe123',
         name: "John Doe",
+        userId: 4
       },
       {
         email: 'alice.johnson@gmail.com',
         password: 'strongPassword456',
         username: 'alicej123',
         name: "Alice Johnson",
+        userId: 5
       },
       {
         email: 'david.kim@outlook.com',
         password: 'password789',
         username: 'davidkim99',
         name: "David Kim",
+        userId: 6
       },
     ];
     // Rest of your code using the users array
