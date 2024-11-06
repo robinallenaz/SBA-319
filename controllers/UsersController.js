@@ -12,7 +12,7 @@ let controls = {
             })
         }
     }
-},
+}
 
 create: async (req, res) => {
     try {
