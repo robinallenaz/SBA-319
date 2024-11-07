@@ -1,10 +1,41 @@
 const mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
-let UserSchema = new Schema({
-  name: String,
-  age: Number,
-  Hobby: String
+const userSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+    validate: {
+      validator: (value) => {
+        return /^[a-zA-Z0-9]+$/.test(value);
+      },
+      message: 'Username must be alphanumeric',
+    },
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    validate: {
+      validator: (value) => {
+        return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
+      },
+      message: 'Email must be valid',
+    },
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  hobby: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("User", UserSchema);

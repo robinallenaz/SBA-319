@@ -29,5 +29,27 @@ create: async (req, res) => {
             errors: err
         })
     }
+},
+update: async (req, res) => {
+    try {
+        let foundUser = await UserModel.findOneAndUpdate({name: req.body.name}, req.body);
+        res.json(foundUser);
+    }
+    catch(err) {
+        res.json({
+            errors: err
+        })
+    }   
+},
+delete: async (req, res) => {
+    try {
+        let deletedUser = await UserModel.findOneAndDelete(req.body.name);
+        res.json(deletedUser);
+    }
+    catch(err) {
+        res.json({
+            errors: err
+        })
+    }
 }
 module.exports = controls;
