@@ -27,14 +27,20 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+    minlength: 8,
+    maxlength: 50,
   },
   name: {
     type: String,
     required: true,
+    minlength: 2,
+    maxlength: 50,
   },
   hobby: {
     type: String,
     required: true,
+    minlength: 2,
+    maxlength: 50,
   },
 });
 
