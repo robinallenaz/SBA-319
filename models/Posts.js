@@ -1,27 +1,24 @@
 import mongoose from 'mongoose';
 
 const postSchema = new mongoose.Schema({
-    title: {
-      type: String,
-      required: true,
-      validate: {
-        validator: (value) => {
-          return value.length > 0;
-        },
-        message: 'Title cannot be empty'
-      }
+    title: String,
+    text: String,
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
     },
-    text: {
-      type: String,
-      required: true,
-      validate: {
-        validator: (value) => {
-          return value.length > 0;
-        },
-        message: 'Text cannot be empty'
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comment'
       }
-    },
-    // ...
+    ]
+  }, {
+    //Compound index
+    index: {
+      userId: 1,
+      title: 1
+    }
   });
 
 const Post = mongoose.model('Post', postSchema);
