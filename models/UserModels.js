@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
       },
       message: 'Username must be alphanumeric',
     },
+    index: true;
   },
   email: {
     type: String,
