@@ -29,9 +29,6 @@ POST /comments: Creates a new comment.
 GET /comments/:id: Retrieves a single comment by ID.
 PUT /comments/:id: Updates a single comment by ID.
 DELETE /comments/:id: Deletes a single comment by ID.
-Seed Data
-
-The application includes a seed file (seed.js) that populates the database with sample data. This data includes five users, five posts, and five comments.
 
 ## Objectives
 
