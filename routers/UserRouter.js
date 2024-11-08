@@ -1,7 +1,7 @@
-import express from 'express';
-import UserController from './UserController.js';
+let express = require('express');
+let router = express.Router();
+let UserController = require('../controllers/UsersController.js');
 
-const router = express.Router();
 
 router.get('/', async (req, res) => {
   try {
@@ -23,4 +23,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
