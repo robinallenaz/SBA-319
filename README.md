@@ -61,6 +61,3 @@ Use MongoDB validation to ensure data consistency.
 | Commit frequently to the git repository. | 5% |
 | Include a README file that contains a description of your application. This README must include a description of your API's available routes and their corresponding CRUD operations for reference. | 5% |
 | Level of effort displayed in creativity and user experience. | 5% |
-
-
-Reference: https://medium.com/@brandon.lau86/node-js-express-and-mongodb-get-started-fast-e3a0a09dd41f
