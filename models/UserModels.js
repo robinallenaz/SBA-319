@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
       },
       message: 'Username must be alphanumeric',
     },
-    index: true;
+    index: true
   },
   email: {
     type: String,
@@ -46,7 +46,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("User", UserSchema);
+export default mongoose.model("User", userSchema);
 
 
 // const express = require("express");
