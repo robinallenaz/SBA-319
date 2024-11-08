@@ -22,7 +22,7 @@ app.use(express.json());
 
 //Routes
 
-let UsersController = require('./controllers/UsersController.js');
+import UsersController from './controllers/UsersController.js';
 app.get("/users", UsersController.all);
 app.post("/users", UsersController.create);
 
