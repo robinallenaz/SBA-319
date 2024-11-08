@@ -1,4 +1,39 @@
-# Objectives
+# Project Overview
+
+This project is a server application built with Node.js, Express, and MongoDB. It is designed to create a CRUD API that allows users to interact with a database of posts, comments, and users.
+
+## How it Works
+
+The application uses Express to handle HTTP requests and responses. It uses Mongoose to interact with the MongoDB database. The application has three main collections: users, posts, and comments.
+
+* Users can be created, read, updated, and deleted (CRUD) using the /users endpoint.
+* Posts can be created, read, updated, and deleted (CRUD) using the /posts endpoint.
+* Comments can be created, read, updated, and deleted (CRUD) using the /comments endpoint.
+
+## API Endpoints
+
+The application provides the following API endpoints:
+
+GET /users: Retrieves a list of all users.
+POST /users: Creates a new user.
+GET /users/:id: Retrieves a single user by ID.
+PUT /users/:id: Updates a single user by ID.
+DELETE /users/:id: Deletes a single user by ID.
+GET /posts: Retrieves a list of all posts.
+POST /posts: Creates a new post.
+GET /posts/:id: Retrieves a single post by ID.
+PUT /posts/:id: Updates a single post by ID.
+DELETE /posts/:id: Deletes a single post by ID.
+GET /comments: Retrieves a list of all comments.
+POST /comments: Creates a new comment.
+GET /comments/:id: Retrieves a single comment by ID.
+PUT /comments/:id: Updates a single comment by ID.
+DELETE /comments/:id: Deletes a single comment by ID.
+Seed Data
+
+The application includes a seed file (seed.js) that populates the database with sample data. This data includes five users, five posts, and five comments.
+
+## Objectives
 
 Create a server application with Node, Express, and MongoDB.
 
